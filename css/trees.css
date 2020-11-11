@@ -1,0 +1,50 @@
+.trees{
+    max-width: 1761px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    transition: all ease-out 0.5s;
+}
+
+.trees img{
+    width: 50%;
+    height: 50%;
+    display: cover;
+}
+
+.trees-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trees-text h1{
+    font-weight: 100;
+    font-size: 40px;
+    line-height: 0px;
+}
+
+.trees-text p{
+    font-weight: 100;
+}
+
+@media screen and (max-width: 900px){
+    .trees{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+        transition: all ease-in 0.5s;
+    }
+
+    .trees img{
+        width: 100%;
+    }
+
+    .trees-text{
+        margin-top: 50px;
+    }
+}
