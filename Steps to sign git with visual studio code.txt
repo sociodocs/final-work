@@ -14,7 +14,7 @@ git config --global user.signingkey secretid
 
 code .gitconfig
 
-add 
+add this lines in above file
     [user]
         signingkey = secretid
     
