@@ -168,3 +168,7 @@ body {
     margin-left: 25px;
     margin-right: 10px;
   }
+
+  #chat-section,#blog-section,#profile-section{
+    display: none;
+  }
