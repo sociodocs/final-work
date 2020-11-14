@@ -7,6 +7,9 @@
 @import "css/donate.css";
 @import "css/contact.css";
 @import "css/profile.css";
+@import "css/our-team.css";
+@import "css/our-priorities.css";
+@import "css/footer.css";
 
 @font-face{
     font-family: 'Poppins';
@@ -34,7 +37,6 @@
 }
 
 body{
-    height: 9650px;
     font-family: 'Poppins';
     margin: 0px 2% 0px 2%;
     align-items: center;

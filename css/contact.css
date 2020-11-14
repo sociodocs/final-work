@@ -1,6 +1,6 @@
 #contact{
     max-width: 1761px;
-    height: 100vh;
+    position: static;
 }
 #contact-title{
     background: #C4C4C4;
