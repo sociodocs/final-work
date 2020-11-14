@@ -77,7 +77,7 @@
     </section>
     <section class="donate" id="donate">
         <div id="donation-title">Donation</div>
-        <div>
+        <div id="donate-wrapper">
             <h1>Give With Confidence</h1>
             <form class="donation-form">
                 <div class="select-don-type">
@@ -144,7 +144,61 @@
         </div>
     </section>
     <section data-text="contact" id="contact" class="contact">
-
+        <div id="contact-title">Contact</div>
+        <div class="contact-container">
+            <div class="contactinfo">
+                <div>
+                    <h2> Contact Info </h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="logo/place-white.png"></span>
+                            <span>
+                            Fergusson College<br>Pune<br>411001
+                            </span>
+                        </li>
+                        <li>
+                            <span><img src="logo/email-white.png"></span>
+                            <span> info@sociodox.org </span>
+                        </li>
+                        <li>
+                            <span><img src="logo/call-white.png"></span>
+                            <span> +91-99999-99999 </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contactForm" id="contact1">
+                <form action="php/contact.php" method="POST">
+                    <h2> Send a Message </h2>
+                    <div class="formBox">
+                        <div class="inputBox w50">
+                            <input type="text" name="cfname" required>
+                            <span> First Name </span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="clname" required>
+                            <span> Last Name </span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="cemail" required>
+                            <span> Email Address </span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="cmobile_no" required>
+                            <span> Mobile Number </span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="cmsg" required></textarea>
+                            <span> Write your message here... </span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Send">
+                        </div>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
     </section>
     <section id="our-team"></section>
     <section id="our-priorities"></section>

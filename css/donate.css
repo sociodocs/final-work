@@ -2,6 +2,10 @@
     max-width: 1761px;
 }
 
+#donate-wrapper{
+    margin-top: 70px;
+}
+
 .donate div h1{
     font-size: 32px;
     text-align: left;

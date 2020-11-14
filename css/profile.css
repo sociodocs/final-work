@@ -1,11 +1,4 @@
-body {
-    margin: 1px;
-    font-family: 'Poppins';
-    font-weight: 300;
-    height: 100vh;
-  }
-   
-  .sidebar1 {
+.sidebar1 {
   grid-area: sidebar1;
   }
   
