@@ -109,7 +109,14 @@ footer ul{
     transition: 0.5s;
 }
 
-@media(max-width:1024px){
+@media(max-width:1150px){
+
+    .f-section{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
    .f-email{
        margin: 20px auto;
        display: flex;
@@ -124,11 +131,6 @@ footer ul{
 }
 
 @media(max-width:864px){
-    .f-section{
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
     .f-section ul h1{
         font-size: 25px;

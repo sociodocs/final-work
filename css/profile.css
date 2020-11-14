@@ -141,10 +141,12 @@
     width: 4%;
   }
 
+/*******Change this img tag , give it a unique class
   img{
       width: 25px;
       height: auto;
     }
+  *****/
   
  #chat{
       margin-left: 10px;

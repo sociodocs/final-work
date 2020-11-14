@@ -46,6 +46,9 @@
     cursor: pointer;
 }
 
+.educate button:hover {
+    opacity: 0.8;
+}
 @media screen and (max-width: 900px){
     .educate h1{
         text-align: right;

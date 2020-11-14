@@ -6,18 +6,20 @@
     margin-top: 70px;
 }
 
+#donation-title{
+    background: #C4C4C4;
+    font-weight: 400;
+    font-size: 32px;
+    color: #fff;
+    max-width: 1761px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .donate div h1{
     font-size: 32px;
     text-align: left;
     margin-left: 5%;
-}
-
-#donation-title{
-    background: #C4C4C4;
-    font-weight: 400;
-    font-size: 45px;
-    color: #fff;
-    max-width: 1761px;
 }
 
 .donation-form{
@@ -67,12 +69,26 @@
 }
 
 .select-org select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #F7F1F1;
+    outline: none;
     font-weight: 100;
     font-size: 20px;
     width: 20%;
+    min-width: 300px;
     text-align: center;
     margin-left: 100px;
-    line-height: 40px;
+    line-height: 42px;
+}
+
+.select-org img{
+    position: relative;
+    top: 5px;
+    left: -40px;
+    width: 20px;
+    height: 20px;
 }
 
 .donation-form hr{
@@ -109,13 +125,29 @@
 }
 
 .country select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border: none;
+    background: #F7F1F1;
+    outline: none;
+    font-weight: 100;
+    font-size: 20px;
     text-align: center;
-    line-height: 40px;
+    line-height: 42px;
+}
+
+.country img{
+    position: relative;
+    top: -30px;
+    left: 90%;
+    width: 20px;
+    height: 20px;
 }
 
 #impact-button{
     margin: 50px;
 }
+
 #impact-button button{
     border: none;
     width: 50%;
@@ -126,6 +158,9 @@
     cursor: pointer;
 }
 
+#impact-button button:hover{
+    opacity: 0.85;
+}
 @media screen and (max-width: 900px){
 
     .select-org label{
