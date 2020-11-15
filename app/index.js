@@ -14,6 +14,7 @@ function navCheck(entries){
         const className = entry.target.className;
         const activeAnchor = document.querySelector(`[data-page=${className}]`);
         const coords = activeAnchor.getBoundingClientRect();
+        const actScrWid = document.body.getBoundingClientRect().width;
 
         const directions = {
             height: coords.height,
@@ -21,8 +22,12 @@ function navCheck(entries){
             top: coords.top,
             left: coords.left
         };
+
+        const perRemove = (((actScrWid*5)/100)/2);
+        directions.left = directions.left - perRemove;
+        
         if(entry.isIntersecting){
-            marker.style.setProperty("left", `${directions.left}px`);
+            marker.style.setProperty("left",`${directions.left}px`);
             marker.style.setProperty("top", `${directions.top}px`);
             marker.style.setProperty("width", `${directions.width}px`);
             marker.style.setProperty("height", `${directions.height}px`);

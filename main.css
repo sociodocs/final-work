@@ -36,6 +36,10 @@
     font-weight: 100;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     font-family: 'Poppins';
     margin: 0px 2% 0px 2%;
