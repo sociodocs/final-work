@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     margin-top: 200px;
     margin-bottom: 200px;
     transition: all ease-out 0.5s;
@@ -15,22 +16,22 @@
 }
 
 .trees-text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .trees-text h1{
-    font-weight: 100;
-    font-size: 40px;
-    line-height: 0px;
+    font-weight: 200;
+    font-size: 64px;
+    margin: 0px;
 }
 
 .trees-text p{
     font-weight: 100;
+    font-size: 30px;
 }
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1250px){
     .trees{
         display: flex;
         flex-direction: column;

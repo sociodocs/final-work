@@ -105,6 +105,7 @@ footer ul{
 
 .Newsletter:hover{
     opacity: 0.8;
+    cursor: pointer;
     font-weight: 400;
     transition: 0.5s;
 }

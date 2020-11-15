@@ -1,11 +1,12 @@
 .blog{
     max-width: 1761px;
+    margin-top: 200px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-top: 200px;
-    margin-bottom: 200px;
     transition: all ease-out 0.5s;
+    position: relative;
 }
 
 .blog img{
@@ -37,16 +38,8 @@
     margin: 0%;
 }
 
-.blog-text h2{
-    font-weight: 100;
-    font-size: 30px;
-    line-height: 0px;
-    text-align: justify;
-    margin: 1;
-}
-
 .blog-text p{
-    font-weight: 100;
+    font-weight: 200;
     text-align: justify;
     font-size: 25px;
     margin: 10px 0px 10px 0px;
@@ -60,18 +53,19 @@
     background-color: #E5E5E5;
     font-size: 25px;
     cursor: pointer;
+    position: absolute;
+    bottom: 6%
 }
 
 .blog button:hover {
     opacity: 0.85;
 }
-@media screen and (max-width: 1200px){
-    .blog{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@media screen and (max-width: 1250px){
+    .blog{ 
         margin-top: 100px;
         margin-bottom: 100px;
+        flex-direction: column;
+        align-items: center;
         transition: all ease-in 0.5s;
     }
 
@@ -82,5 +76,9 @@
     .blog-text{
         margin-top: 50px;
         width: 96%;
+    }
+
+    .blog button{
+        position: static;
     }
 }

@@ -26,6 +26,7 @@
     border: 1px solid #000;
     width: 90%;
     max-width: 1545px;
+    min-width: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -139,7 +140,7 @@
 .country img{
     position: relative;
     top: -30px;
-    left: 90%;
+    left: 94%;
     width: 20px;
     height: 20px;
 }
