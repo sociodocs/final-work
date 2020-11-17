@@ -3,8 +3,8 @@ header {
   top: 0px; /* this condition is mandatory to stick the menu */
   background-color: #fff;
   z-index: 2000;
-  
 }
+
 nav {
   min-height: 7vh;
   margin: auto;
@@ -75,6 +75,7 @@ nav ul li a:hover {
   /*border-radius: 0px;*/
   padding: 1px;
   font-size: 24px;
+  outline: none;
 }
 
 @media screen and (max-width: 900px) {
@@ -217,7 +218,7 @@ nav ul li a:hover {
 }
 
 /* Section Response */
-.marker{
+.marker {
   position: absolute;
   z-index: -2;
   border: 1px solid #000;
