@@ -117,7 +117,7 @@
     margin: 20px;
 }
 
-#don-input{
+.don-input{
     border: none;
     background: #F7F1F1;
     line-height: 40px;
@@ -149,7 +149,7 @@
     margin: 50px;
 }
 
-#impact-button button{
+#impact-button input[type=submit]{
     border: none;
     width: 50%;
     height: auto;
@@ -159,7 +159,7 @@
     cursor: pointer;
 }
 
-#impact-button button:hover{
+#impact-button input[type=submit]:hover{
     opacity: 0.85;
 }
 @media screen and (max-width: 900px){

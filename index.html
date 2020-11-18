@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sociodox</title>
     <link rel="stylesheet" href="main.css">
+    <script defer src="app/index.js"></script>
+    <script defer src="app/contact.js"></script>
 </head>
-<body><center>
+<body>
+    <center>
     <header>
         <nav>
             <input type="checkbox" id="nav" class="hidden"/>
@@ -79,7 +82,7 @@
             <div id="donation-title">Donation</div>
             <div id="donate-wrapper">
                 <h1>Give With Confidence</h1>
-                <form class="donation-form">
+                <form class="donation-form" id="donation-form-submit">
                     <div class="select-don-type">
                         <input type="radio" name="don-type" id="once" checked>
                         <label for="once">Give Once</label>
@@ -98,27 +101,27 @@
                         <div id="first-row">
                             <div class="first-name">
                                 <label for="first-name">First Name</label>
-                                <input type="text" name="first-name" id="don-input">
+                                <input type="text" name="first-name" class="don-input" id="d-fn">
                             </div>
                             <div class="last-name">
                                 <label for="last-name">Last Name</label>
-                                <input type="text" name="last-name" id="don-input">
+                                <input type="text" name="last-name" class="don-input" id="d-ln">
                             </div>
                         </div>
                         <div id="second-row">
                             <div class="email">
                                 <label for="email">Email</label>
-                                <input type="text" name="email" id="don-input">
+                                <input type="text" name="email" class="don-input" id="d-em">
                             </div>
                             <div class="mobile">
                                 <label for="mobile">Mobile</label>
-                                <input type="text" name="mobile" id="don-input">
+                                <input type="text" name="mobile" class="don-input" id="d-mb">
                             </div>
                         </div>
                         <div id="third-row">
                             <div class="pan">
                                 <label for="pan">PAN</label>
-                                <input type="text" name="pan" id="don-input">
+                                <input type="text" name="pan" class="don-input" id="d-pan">
                             </div>
                             <div class="country">
                                 <label for="country">Country</label>
@@ -134,16 +137,16 @@
                         <div id="fourth-row">
                             <div class="add-note">
                                 <label for="add-note">Additional Note</label>
-                                <input type="text" name="add-note" id="don-input">
+                                <input type="text" name="add-note" class="don-input">
                             </div>
                             <div class="amount">
                                 <label for="amount">Amount</label>
-                                <input type="text" name="amount" id="don-input">
+                                <input type="text" name="amount" class="don-input">
                             </div>
                         </div>
                     </div>
                     <div id="impact-button">
-                        <button>Create an Impact</button>
+                        <input type="submit" value="Create an Impact">
                     </div>
                 </form>
             </div>
@@ -172,25 +175,25 @@
                         </ul>
                     </div>
                 </div>
-                <div class="contactForm" id="contact1">
-                    <form action="php/contact.php" method="POST">
+                <div class="contactForm">
+                    <form id="contact-form-submit">
                         <h2> Send a Message </h2>
                         <div class="formBox">
                             <div class="inputBox w50">
-                                <input type="text" name="cfname" required>
-                                <span> First Name </span>
+                                <input type="text" name="cfname" id="cfname" required>
+                                <span id="cfn-span"> First Name </span>
                             </div>
                             <div class="inputBox w50">
-                                <input type="text" name="clname" required>
-                                <span> Last Name </span>
+                                <input type="text" name="clname" id="clname" required>
+                                <span id="cln-span"> Last Name </span>
                             </div>
                             <div class="inputBox w50">
-                                <input type="text" name="cemail" required>
-                                <span> Email Address </span>
+                                <input type="text" name="cemail" id="cemail" required>
+                                <span id="cem-span"> Email Address </span>
                             </div>
                             <div class="inputBox w50">
-                                <input type="text" name="cmobile_no" required>
-                                <span> Mobile Number </span>
+                                <input type="text" name="cmobile" id="cmobile" required>
+                                <span id="cmb-span"> Mobile Number </span>
                             </div>
                             <div class="inputBox w100">
                                 <textarea name="cmsg" required></textarea>
@@ -272,11 +275,11 @@
             </div>
             <!--email-->
             <div class="f-email">
-              <form action="php/newsletter.php" method="POST">
+              <form action="php/newsletter.php" method="POST" name="newsletter">
               <!--heading-->
               <h1 id="f-title"> Newsletter </h1>
-              <input type="email" placeholder="Enter Your Email" name="letteremail"/><br/>
-              <button class="Newsletter" type="submit">SUBSCRIBE</button>
+              <input type="text" placeholder="Enter Your Email" name="email"/><br/>
+              <button class="Newsletter" type="submit" onclick="validate_newsletter(document.newsletter.email)">SUBSCRIBE</button>
               </form>
             </div>
           </div>
@@ -338,7 +341,11 @@
             </div>
           </div>
         </div>
-      </div>
-    <script src="app/index.js"></script></center>
+    </div>
+    <div id="success-popup">
+        <div id="success-popup-msg"></div>
+        <button id="success-button" onclick="success_toggle()"></button>
+    </div>
+    </center>
 </body>
 </html>
