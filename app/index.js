@@ -158,10 +158,17 @@ donationForm.addEventListener('submit', (e) => {
     }else
         d_pan.style.outline = "none";
 });
+/*
+const amount = document.getElementById('amount');
+
+if(donFlag) {
+    document.getElementById("success-popup-msg").innerHTML = `Donated ${amount}`;
+    document.getElementById("success-button").innerHTML = "Okay";
+    success_toggle();
+}
+*/
 
 //conatct from validation to
-
-
 
 //success toggle
 
