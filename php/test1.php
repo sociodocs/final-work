@@ -1,1 +1,3 @@
-test
+<?php
+    print_r(POST);
+?>
