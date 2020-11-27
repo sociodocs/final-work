@@ -94,16 +94,6 @@ function ValidateMobile(mobile){
     }
 }
 
-function ValidatePAN(PAN){
-
-    if (/[A-Z]{5}[0-9]{4}[A-Z]{1}/.test(PAN.value)){
-        return (true)
-    }
-    else{
-        return (false)  
-    }
-}
-
 //success toggle
 
 const success_button = document.getElementById("success-button");
@@ -114,6 +104,8 @@ function success_toggle(){
     
     var popup = document.getElementById('success-popup');
     popup.classList.toggle('active');
+
+    return true;
 }
 
 function validate_newsletter(email){
@@ -129,4 +121,10 @@ function validate_newsletter(email){
         success_button.style.background = "red";
     }
     success_toggle();
+}
+
+function resetAllForms(){
+
+    document.getElementById("donation-form-submit").reset();
+    document.getElementById("contact-form-submit").reset();
 }

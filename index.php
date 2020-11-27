@@ -6,8 +6,8 @@
     <title>Sociodox</title>
     <link rel="stylesheet" href="main.css">
     <script defer src="app/index.js"></script>
-    <script defer src="app/contact.js"></script>
-    <script defer src="app/donation.js"></script>
+    <script defer src="contact.js"></script>
+    <script defer src="donation.js"></script>
 </head>
 <body>
     <center>
@@ -83,17 +83,18 @@
             <div id="donation-title">Donation</div>
             <div id="donate-wrapper">
                 <h1>Give With Confidence</h1>
-                <form class="donation-form" id="donation-form-submit">
+                <form class="donation-form" id="donation-form-submit" method="post">
                     <div class="select-don-type">
-                        <input type="radio" name="don-type" id="once" checked>
+                        <input type="radio" name="don-type" id="don-type" value="once" checked>
                         <label for="once">Give Once</label>
-                        <input type="radio" name="don-type" id="monthly">
+                        <input type="radio" name="don-type" id="don-type" value="monthly">
                         <label for="monthly">Give Monthly</label>
                     </div>
                     <div class="select-org">
                         <label>Select Organization</label>
-                        <select>
+                        <select name="org_name" id="org_name">
                             <option value="sociodox">Sociodox</option>
+                            <option value="save_tree">Save Trees</option>
                         </select>
                         <img src="logo/down-chevron.png">
                     </div>
@@ -121,12 +122,12 @@
                         </div>
                         <div id="third-row">
                             <div class="pan">
-                                <label for="pan">PAN</label>
+                                <label for="pan">ID</label>
                                 <input type="text" name="pan" class="don-input" id="d-pan">
                             </div>
                             <div class="country">
                                 <label for="country">Country</label>
-                                <select>
+                                <select id="country" name="country">
                                     <option value="IND">India</option>
                                     <option value="USA">USA</option>
                                     <option value="JPN">Japan</option>
@@ -138,7 +139,7 @@
                         <div id="fourth-row">
                             <div class="add-note">
                                 <label for="add-note">Additional Note</label>
-                                <input type="text" name="add-note" class="don-input">
+                                <input type="text" name="add-note" class="don-input" id="add-note">
                             </div>
                             <div class="amount">
                                 <label for="amount">Amount</label>
@@ -197,7 +198,7 @@
                                 <span id="cmb-span"> Mobile Number </span>
                             </div>
                             <div class="inputBox w100">
-                                <textarea name="cmsg" required></textarea>
+                                <textarea name="cmsg" id="cmsg" required></textarea>
                                 <span> Write your message here... </span>
                             </div>
                             <div class="inputBox w100">
@@ -276,7 +277,7 @@
             </div>
             <!--email-->
             <div class="f-email">
-              <form action="php/newsletter.php" method="POST" name="newsletter">
+              <form method="POST" name="newsletter">
               <!--heading-->
               <h1 id="f-title"> Newsletter </h1>
               <input type="text" placeholder="Enter Your Email" name="email"/><br/>
@@ -345,7 +346,7 @@
     </div>
     <div id="success-popup">
         <div id="success-popup-msg"></div>
-        <button id="success-button" onclick="success_toggle()"></button>
+        <button id="success-button" onclick="success_toggle(); resetAllForms();"></button>
     </div>
     </center>
 </body>
