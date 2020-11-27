@@ -1,3 +1,4 @@
+<?php require_once("php/database.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,8 +94,16 @@
                     <div class="select-org">
                         <label>Select Organization</label>
                         <select name="org_name" id="org_name">
-                            <option value="sociodox">Sociodox</option>
-                            <option value="save_tree">Save Trees</option>
+                            <?php
+                                $result = pg_query($conn,"Select * from organization");
+
+                                while($row = pg_fetch_assoc($result)){
+                                    $orgName = $row["org_name"];
+                            ?>
+                                    <option value="<?php echo $orgName; ?>" > <?php echo "$orgName"; ?> </option>
+                            <?php
+                                }
+                            ?>
                         </select>
                         <img src="logo/down-chevron.png">
                     </div>
