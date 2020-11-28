@@ -2,19 +2,20 @@ DROP TABLE IF EXISTS users_organization;
 DROP TABLE IF EXISTS profile;
 DROP TABLE IF EXISTS admin;
 DROP TABLE IF EXISTS comment;
-drop table if EXISTS donation;
+DROP TABLE if EXISTS donation;
 DROP TABLE IF EXISTS organization;
-drop table if EXISTS newsletter;
-drop table if EXISTS contact;
-drop table if EXISTS users;
+DROP TABLE if EXISTS newsletter;
+DROP TABLE if EXISTS contact;
+DROP TABLE if EXISTS users;
 
-create table users(
+CREATE TABLE users(
     username varchar(50) primary key,
     email varchar(100),
     mobile_no bigint,
-    password varchar(255) not null);
+    password varchar(255) not null
+    );
 
-create table contact(
+CREATE TABLE contact(
     contact_id serial primary key,
     first_name varchar(50) not null,
     last_name varchar(50) not null,
@@ -24,21 +25,21 @@ create table contact(
     );
 
 
-create table newsletter(
+CREATE TABLE newsletter(
     email_id serial primary key,
     email varchar(50) not null
-);
+    );
 
 
-create table organization(
+CREATE TABLE organization(
     org_id serial NOT NULL PRIMARY key,
     org_name varchar(20) NOT NULL,
     org_type varchar(50) NOT NULL,
     org_category varchar(50) NOT NULL,
     org_total_don int NOT NULL
-);
+    );
 
-create table donation(
+CREATE TABLE donation(
     donation_id serial primary key,
     first_name varchar(50) not null,
     last_name varchar(50) not null,
@@ -50,24 +51,25 @@ create table donation(
     amount int not null,
     comment text,
     org_id serial REFERENCES organization(org_id) on delete cascade on update set null
-);
+    );
 
 CREATE TABLE comment(
   sr_no serial NOT NULL PRIMARY key,
   name varchar(20) NOT NULL,
   comments text NOT NULL,
   post_time timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+  );
 
-create table admin(
+CREATE TABLE admin(
     admin_username varchar(50) primary key,
-    admin_password varchar(50) not null);
+    admin_password varchar(50) not null
+    );
 
 insert into admin VALUES('aditya','123');
 insert into admin VALUES('utkarsh','123');
 insert into admin VALUES('devis','123');
 
-create table profile(
+CREATE TABLE profile(
     pid serial NOT NULL PRIMARY key,
     first_name varchar(50) not null,
     last_name varchar(50) not null,
@@ -75,15 +77,15 @@ create table profile(
     mobile_no bigint,    
     dp varchar(50) NOT NULL,
     username varchar(50) REFERENCES users(username) on delete cascade on update set null
-);
+    );
 
-create table users_organization(
+CREATE TABLE users_organization(
     username varchar(50) REFERENCES users(username) on delete cascade on update set null,
     org_id serial REFERENCES organization(org_id) on delete cascade on update set null
-);
+    );
 
 CREATE TABLE finalchat(
   uname varchar(20) NOT NULL,
   msg text NOT NULL,
   dt timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
-);
+  );

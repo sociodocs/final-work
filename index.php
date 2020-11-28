@@ -7,8 +7,8 @@
     <title>Sociodox</title>
     <link rel="stylesheet" href="main.css">
     <script defer src="app/index.js"></script>
-    <script defer src="contact.js"></script>
-    <script defer src="donation.js"></script>
+    <script defer src="app/contact.js"></script>
+    <script defer src="app/donation.js"></script>
 </head>
 <body>
     <center>
@@ -86,9 +86,9 @@
                 <h1>Give With Confidence</h1>
                 <form class="donation-form" id="donation-form-submit" method="post">
                     <div class="select-don-type">
-                        <input type="radio" name="don-type" id="don-type" value="once" checked>
+                        <input type="radio" name="don-type" id="once" value="once" checked>
                         <label for="once">Give Once</label>
-                        <input type="radio" name="don-type" id="don-type" value="monthly">
+                        <input type="radio" name="don-type" id="monthly" value="monthly">
                         <label for="monthly">Give Monthly</label>
                     </div>
                     <div class="select-org">
@@ -286,7 +286,7 @@
             </div>
             <!--email-->
             <div class="f-email">
-              <form method="POST" name="newsletter">
+              <form name="newsletter">
               <!--heading-->
               <h1 id="f-title"> Newsletter </h1>
               <input type="text" placeholder="Enter Your Email" name="email"/><br/>

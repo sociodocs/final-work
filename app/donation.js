@@ -105,9 +105,16 @@ function succ_don() {
 
         data.append("country", document.getElementById('country').value);
         data.append("add-note", document.getElementById('add-note').value);
-        data.append("don-type", document.getElementById('don-type').value);
         data.append("amount", document.getElementById('amount').value);
         data.append("org_name", document.getElementById('org_name').value);
+
+        var once = document.getElementById('once');
+        var monthly = document.getElementById('monthly');
+
+        if(once.checked)
+            data.append("don-type", once.value);
+        else
+            data.append("don-type", monthly.value);
 
         // (B) AJAX
         var xhr = new XMLHttpRequest();
