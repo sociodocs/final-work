@@ -116,7 +116,7 @@ function succ_don() {
         else
             data.append("don-type", monthly.value);
 
-        // (B) AJAX
+        //AJAX
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "php/donate.php", true);
 
